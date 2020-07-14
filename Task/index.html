@@ -45,5 +45,187 @@
         </div>
     </header>
     <!-- header ends -->
+
+    <!-- main section starts -->
+    <main>
+        <!-- left sidebar menu starts -->
+        <aside>
+            <div class="left-menu">
+                <ul>
+                    <li><a href="#">Ana Səhifə</a></li>
+                    <li><a href="#">Müraciət edən şəxslərlə iş</a>
+                        <ul>
+                            <li><a href="#">Yeni müraciətlər</a></li>
+                            <li class="active"><a href="#">İşaxtaran şəxslər</a></li>
+                            <li><a href="#">İşsiz şəxslər</a></li>
+                            <li><a href="#">İşlə təmin edilmiş şəxslər</a></li>
+                            <li><a href="#">Qeydiyyatı dayandırılmış şəxslər</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <!-- main content goes below -->
+        <section class="main-content">
+            <div class="container">
+                <h1>İşaxtaran şəxslər</h1>
+                <div class="filter">
+                    <h5>Axtarış filtrləri</h5>
+                    <form action="#">
+                        <div>
+                            <label for="id">FİN</label><br />
+                            <input type="text" name="identity" id="id" />
+                        </div>
+                        <div>
+                            <label for="fullname">Ad, soyad, ata adı</label><br />
+                            <input type="text" name="fullname" id="fullname" />
+                        </div>
+                        <div>
+                            <label for="work">İşlə təmin olunma forması</label><br />
+                            <select name="work" id="work">
+                                <option value="forma1">İşlə təmin olunma forması 1</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="since">Tarixdən</label><br />
+                            <input type="date" name="since" id="since" />
+                        </div>
+                        <div>
+                            <label for="until">Tarixə</label><br />
+                            <input type="date" name="until" id="until" />
+                        </div>
+                    </form>
+                    <div class="settings">
+                        <div class="detailed">
+                            <button>Ətraflı</button>
+                        </div>
+                        <div class="search">
+                            <button>Axtarış et</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="results">
+                    <div class="overall">
+                        <p>Ümumi nəticələr [356]</p>
+                    </div>
+                    <div class="file-options">
+                        <button>PDF</button>
+                        <button>Excel</button>
+                        <button>Çap et</button>
+                    </div>
+                </div>
+                <div class="applicants-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>S/S</th>
+                                <th>FİN</th>
+                                <th>Ad, soyad, ata adı</th>
+                                <th>Müraciətin tarixi</th>
+                                <th>Müraciətin növü</th>
+                                <th>İşaxtaran kimi qeydiyyat tarixi</th>
+                                <th>Qeydiyyata alan orqan</th>
+                                <th class="center">Ləğv et</th>
+                                <th class="center">Ətraflı</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1
+                                    <img src="images/user1.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Quliyeva İnci Vidadi</td>
+                                <td>01.01.2020</td>
+                                <td>İş üçün</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                            <tr class="offers">
+                                <td></td>
+                                <td colspan="8">
+                                    <div>
+                                        <button>Vətəndaşın şəxsi işi</button>
+                                        <button>Fərdi Məşğulluq Vərəqi</button>
+                                        <button>Münasib iş</button>
+                                        <button>Göndərişlər</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3
+                                    <img src="images/user3.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Quliyev Vaqif Əlibala</td>
+                                <td>01.01.2020</td>
+                                <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                            <tr>
+                                <td>4
+                                    <img src="images/user4.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Qasımov Rüfət Qırxlar</td>
+                                <td>01.01.2020</td>
+                                <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                            <tr>
+                                <td>5
+                                    <img src="images/user5.png" alt="applicant's profile photo" />
+                                </td>
+                                <td>25UGAP3</td>
+                                <td>Miriyev Zakir Qurban</td>
+                                <td>01.01.2020</td>
+                                <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                <td>01.01.2020</td>
+                                <td>1 saylı MM</td>
+                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/in_detail.png" alt="in detail icon"></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="9">
+                                    <nav aria-label="...">
+                                        <ul class="pagination">
+                                          <li class="page-item disabled">
+                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                                <img src="images/left_arrow.png" alt="">
+                                            </a>
+                                          </li>
+                                          <li class="page-item active"><a class="page-link active" href="#">1</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                          <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                          <li class="page-item">
+                                            <a class="page-link" href="#">
+                                                <img src="images/right_arrow.png" alt="">
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </nav>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- main section ends -->
 </body>
 </html>
