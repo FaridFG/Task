@@ -54,6 +54,7 @@
                 <ul>
                     <li><a href="#">Ana Səhifə</a></li>
                     <li><a href="#">Müraciət edən şəxslərlə iş</a>
+                        <img src="images/dropdown_icon.png" alt="" id="dropdown">
                         <ul>
                             <li><a href="#">Yeni müraciətlər</a></li>
                             <li class="active"><a href="#">İşaxtaran şəxslər</a></li>
@@ -140,7 +141,7 @@
                                 <td>İş üçün</td>
                                 <td>01.01.2020</td>
                                 <td>1 saylı MM</td>
-                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
                                 <td><img src="images/in_detail.png" alt="in detail icon"></td>
                             </tr>
                             <tr class="offers">
@@ -164,7 +165,7 @@
                                 <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
                                 <td>01.01.2020</td>
                                 <td>1 saylı MM</td>
-                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
                                 <td><img src="images/in_detail.png" alt="in detail icon"></td>
                             </tr>
                             <tr>
@@ -177,7 +178,7 @@
                                 <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
                                 <td>01.01.2020</td>
                                 <td>1 saylı MM</td>
-                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
                                 <td><img src="images/in_detail.png" alt="in detail icon"></td>
                             </tr>
                             <tr>
@@ -190,34 +191,34 @@
                                 <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
                                 <td>01.01.2020</td>
                                 <td>1 saylı MM</td>
-                                <td><img src="images/close_icon.png" alt="close icon"></td>
+                                <td><img src="images/close_icon.png" alt="close icon" class="btn-close"></td>
                                 <td><img src="images/in_detail.png" alt="in detail icon"></td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr>
                                 <td colspan="9">
-                                    <nav aria-label="...">
+                                    <nav>
                                         <ul class="pagination">
-                                          <li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
-                                                <img src="images/left_arrow.png" alt="">
-                                            </a>
-                                          </li>
-                                          <li class="page-item active"><a class="page-link active" href="#">1</a></li>
-                                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                          <li class="page-item"><a class="page-link" href="#">4</a></li>
-                                          <li class="page-item"><a class="page-link" href="#">5</a></li>
-                                          <li class="page-item"><a class="page-link" href="#">6</a></li>
-                                          <li class="page-item"><a class="page-link" href="#">7</a></li>
-                                          <li class="page-item">
-                                            <a class="page-link" href="#">
-                                                <img src="images/right_arrow.png" alt="">
-                                            </a>
-                                          </li>
+                                            <li>
+                                                  <a href="#">
+                                                      <img src="images/left_arrow.png" alt="">
+                                                  </a>
+                                            </li>
+                                            <li class="active"><a class="active" href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li><a href="#">6</a></li>
+                                            <li><a href="#">7</a></li>
+                                            <li>
+                                                <a class="page-link" href="#">
+                                                    <img src="images/right_arrow.png" alt="">
+                                                </a>
+                                            </li>
                                         </ul>
-                                      </nav>
+                                    </nav>
                                 </td>
                             </tr>
                         </tfoot>
@@ -227,5 +228,69 @@
         </section>
     </main>
     <!-- main section ends -->
+
+    <!-- modal starts -->
+    <div class="modal">
+        <div class="content">
+            <div class="heading">
+                <hr />
+                <h4>Yeni müraciəti ləğv et</h4>
+                <hr />
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice1">
+                    </div>
+                    <div>
+                        <label for="choice1">Təqdim olunmuş sənədlərdə və məlumatlarda təhrif olunmuş və ya düzgün olmayan məlumatlar aşkar edildikdə.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice2">
+                    </div>
+                    <div>
+                        <label for="choice2">Hərbi və ya alternativ xidmətdə olduqda, hərbi toplanışlarda olduqda.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice3">
+                    </div>
+                    <div>
+                        <label for="choice3">Barəsində azadlıqdan məhrumetmə və ya tibbi xarakterli məcburi tədbirlərin tətbiqinə dair məhkəmənin qanuni qüvvəyə minmiş qərarı olduqda.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="choice">
+                <form action="#">
+                    <div>
+                        <input type="checkbox" name="decline" id="choice4">
+                    </div>
+                    <div>
+                        <label for="choice4">Vəfat etdikdə və ya məhkəmənin qanuni qüvvəyə minmiş qərarı əsasında xəbərsiz itkin düşmüş və ya ölmüş elan edildikdə.</label>
+                    </div>
+                </form>
+            </div>
+            <div class="buttons">
+                <div>
+                    <button class="close-modal">Bağla</button>
+                </div>
+                <div>
+                    <button class="save">Yadda saxla</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal ends -->
+
+    <!-- necessary JS links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
