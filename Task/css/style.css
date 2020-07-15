@@ -12,7 +12,8 @@
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
+    height: 10px;
     background-color: #F5F5F5;
 }
 
@@ -30,6 +31,11 @@ body {
 
 ul {
     list-style-type: none;
+}
+
+p {
+    font-size: 15px;
+    line-height: 20px;
 }
 
 button {
@@ -78,29 +84,29 @@ header {
     margin: 0 auto;
 }
 
-.navbar nav .search-box {
+.search-box {
     width: 30%;
 }
 
-.navbar nav .search-box form {
+.search-box form {
     position: relative;
     height: 100%;
 }
 
-.navbar nav .search-box input {
+.search-box input {
     border: none;
     border-radius: 5px;
     width: 100%;
     height: 100%;
 }
 
-.navbar nav .search-box input[placeholder] {
+.search-box input[placeholder] {
     padding-left: 2.75em;
 }
 
-.navbar nav .search-box img {
+#main-search img {
     position: absolute;
-    left: .5em;
+    left: .75em;
     top: 12px;
 }
 
@@ -115,36 +121,94 @@ nav .options .menu-options {
     align-items: center;
 }
 
-nav .options .language-options {
+.language-options {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 120px;
 }
 
-nav .options .language-options p {
-    font-size: 15px;
-    line-height: 20px;
-}
-
 .menu-options .menu-icon {
     margin: 0 50px 0 15px;
 }
 
-nav .options .account-options {
+.account-options {
     display: flex;
     align-items: center;
 }
 
-nav .options .account-options p {
-    font-size: 15px;
-    line-height: 20px;
+.account-options p {
     padding-left: 15px;
 }
 
-nav .options .account-options p:first-child {
+.account-options p:first-child {
     font-size: 10px;
     line-height: 13px;
+}
+
+nav .responsive-menu {
+    display: none;
+}
+
+nav .responsive-menu > ul > li {
+    position: relative;
+}
+
+nav .responsive-menu > ul > li > a {
+    color: #fff;
+    font-size: 25px;
+}
+
+.responsive-dropdown-menu {
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    color: #000;
+    right: 0;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: none;
+}
+
+.responsive-dropdown-menu .account-options {
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.responsive-dropdown-menu .language-options {
+    justify-content: center;
+    width: 100%;
+}
+
+.responsive-dropdown-menu .language-options p {
+    padding: 0 20px;
+}
+
+.responsive-dropdown-menu .search-box {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.responsive-dropdown-menu .search-box form input {
+    height: 30px;
+    border: thin solid rgb(133, 129, 129);
+    border-radius: 20px;
+}
+
+.search-box input[placeholder] {
+    padding-left: 3.2em;
+}
+
+.search-box img {
+    position: absolute;
+    left: 1.1em;
+    top: 5px;
+}
+
+ul.responsive-dropdown-menu li:last-child {
+    margin: 10px 0;
 }
 /* header styles end */
 
@@ -215,6 +279,62 @@ aside {
     background: #0045CC;
     border-radius: 50%;
 }
+
+.responsive-sidebar {
+    display: none;
+    position: relative;
+    z-index: 99999;
+    width: 250px;
+}
+
+.responsive-sidebar > ul {
+    width: 100%;
+}
+
+.responsive-sidebar > ul > li {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.responsive-sidebar > ul > li:first-child {
+    text-align: right;
+    padding: 10px 10px 0 0;
+}
+
+.responsive-sidebar > ul > li:last-child img {
+    padding-left: 15px;
+}
+
+.responsive-sidebar > ul > li > ul {
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.responsive-sidebar > ul > li > ul li {
+    padding: 5px 0 5px 15px;
+}
+
+.responsive-sidebar a {
+    color: #212121;
+}
+
+.responsive-sidebar .dropdown {
+    cursor: pointer;
+}
+
+.left-menu .responsive-sidebar .active::after {
+    content: "";
+    position: absolute;
+    top: calc(30% - 3px);
+    right: 6%;
+    width: 6px;
+    height: 6px;
+    background: #0045CC;
+    border-radius: 50%;
+}
 /* left sidebar styles end */
 
 /* main content styles start */
@@ -227,7 +347,7 @@ aside {
     height: 100%;
 }
 
-.main-content .container h1 {
+.main-content h1 {
     font-weight: 600;
     font-size: 22px;
     line-height: 29px;
@@ -235,34 +355,34 @@ aside {
     margin-bottom: 25px;
 }
 
-.main-content .container .filter {
+.main-content .filter {
     background: #FFFFFF;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 30px;
 }
 
-.main-content .container .filter h5 {
+.main-content .filter h5 {
     margin-bottom: 25px;
 }
 
-.main-content .container .filter form {
+.main-content .filter form {
     height: 60px;
     display: flex;
     justify-content: space-between;
 }
 
-.main-content .container .filter form div {
+.main-content .filter form div {
     width: 18%;
 }
 
-.main-content .container .filter form label {
+.main-content .filter form label {
     font-size: 12px;
     line-height: 19px;
     color: #757575;
 }
 
-.main-content .container .filter form input, select {
+.main-content .filter form input, select {
     background: #FFFFFF;
     border: 1px solid #CED4DA;
     border-radius: 4px;
@@ -273,7 +393,7 @@ aside {
     margin-top: 10px;
 }
 
-.main-content .container .settings {
+.main-content .settings {
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
@@ -308,7 +428,6 @@ aside {
 
 .main-content .settings .search button::before {
     content: url(../images/search_white.png);
-    
 }
 
 .main-content .results {
@@ -347,8 +466,16 @@ aside {
     content: url(../images/print_icon.png);
 }
 
+.main-content .applicants-table {
+    overflow-x: scroll;
+    border: 2px solid #EFEFEF;
+    border-radius: 5px;
+    padding-bottom: 5px;
+}
+
 .main-content .applicants-table table {
-    width: 100%;
+    width: 1188px;
+    box-sizing: border-box;
     border-collapse: collapse;
     background: #FFFFFF;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
@@ -472,7 +599,7 @@ aside {
 
 /* modal styles start */
 div.modal {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -480,6 +607,8 @@ div.modal {
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     display: none;
+    overflow-y: auto;
+    z-index: 999;
 }
 
 div.modal .content {
@@ -547,3 +676,207 @@ div.modal .content .buttons .save {
     border-radius: 4px;
 }
 /* modal styles end */
+
+/* responsive styles start */
+@media (max-width: 1228px) {
+    .left-menu > ul {
+        display: none;
+    }
+
+    .responsive-sidebar {
+        background-color: #fff;
+        box-shadow: 2px 2px 10px 1px rgb(160, 155, 155);
+        border-radius: 5px;
+        display: block;
+        padding-bottom: 10px;
+        transform: translateX(-220px);
+        transition: transform .5s;
+    }
+
+    .responsive-sidebar > ul > li:first-child {
+        display: block;
+    }
+}
+
+@media (max-width: 1144px) {
+    .main-content .filter {
+        padding: 15px 10px;
+    }
+
+    .main-content .filter h5 {
+        width: 70%;
+        margin: 0 auto 25px auto;
+    }
+    
+    .main-content .filter form {
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .main-content .filter form div {
+        width: 70%;
+    }
+    
+    .main-content .filter form label {
+        font-size: 13px;
+    }
+    
+    .main-content .filter form input, select {
+        padding-left: 15px;
+        font-size: 13px;
+    }
+
+    .main-content .filter .settings {
+        width: 70%;
+        margin: 25px auto;
+    }
+
+    div.modal .content {
+        width: 80%;
+        padding: 10px 20px;
+    }
+    
+    div.modal .content > div {
+        margin: 20px 0;
+    }
+    
+    div.modal .content .heading hr {
+        width: 34%;
+    }
+    
+    div.modal .content .choice label {
+        font-size: 14px;
+    }
+    
+    div.modal .content .choice form > div:first-child {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo p {
+        width: 200px;
+    }
+
+    .navbar nav {
+        justify-content: flex-end;
+    }
+
+    #main-search {
+        display: none;
+    }
+    
+    .navbar nav .options {
+        display: none;
+    }
+    
+    nav .responsive-menu {
+        display: block;
+    }
+
+    div.modal .content {
+        padding: 5px 10px;
+    }
+    
+    div.modal .content > div {
+        margin: 10px 0;
+    }
+    
+    div.modal .content .heading hr {
+        width: 30%;
+    }
+    
+    div.modal .content .choice label {
+        font-size: 12px;
+    }
+    
+    div.modal .content .choice form > div:first-child {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 586px) {
+    .main-content .filter h5 {
+        width: 90%;
+        margin: 0 auto 15px auto;
+    }
+    
+    .main-content .filter form div {
+        width: 90%;
+    }
+    
+    .main-content .filter form label {
+        font-size: 12px;
+    }
+    
+    .main-content .filter form input, select {
+        padding-left: 10px;
+        font-size: 12px;
+    }
+
+    .main-content .filter .settings {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .main-content .settings .detailed button, .main-content .settings .search button {
+        width: 80px;
+        height: 35px;
+    }
+
+    .main-content .results {
+        display: block;
+    }
+
+    .main-content .results p {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .main-content .results .file-options {
+        justify-content: center;
+    }
+    
+    .main-content .results .file-options button {
+        margin: 10px;
+        width: 60px;
+        height: 25px;
+        font-size: 12px;
+        line-height: 10px;
+    }
+
+    div.modal .content {
+        padding: 5px 10px;
+    }
+    
+    div.modal .content > div {
+        margin: 10px 0;
+    }
+    
+    div.modal .content .heading hr {
+        width: 25%;
+    }
+
+    div.modal .content .heading h4 {
+        font-size: 12px;
+    }
+    
+    div.modal .content .choice label {
+        font-size: 11px;
+    }
+    
+    div.modal .content .choice form > div:first-child {
+        margin-right: 5px;
+    }
+}
+/* responsive styles end */
+
+.show-sidebar {
+    transform: translateX(0);
+    transition: transform .5s;
+}
+
+.hide-menu {
+    display: none;
+}

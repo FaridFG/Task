@@ -14,7 +14,7 @@
         </div>
         <div class="navbar">
             <nav class="container">
-                <div class="search-box">
+                <div class="search-box" id="main-search">
                     <form action="#">
                         <input type="search" name="search" id="search" placeholder="Axtar" />
                         <img src="images/search_icon.png" alt="search icon" />
@@ -41,6 +41,43 @@
                         </div>
                     </div>
                 </div>
+                <!-- menu icon for tablets and phones -->
+                <div class="responsive-menu">
+                    <ul>
+                        <li>
+                            <a href="#"><i class="fas fa-bars"></i></a>
+                            <ul class="responsive-dropdown-menu">
+                                <li>
+                                    <div class="account-options">
+                                        <div class="profile-image">
+                                            <img src="images/profile_image.png" alt="user's profile image" />
+                                        </div>
+                                        <div class="username">
+                                            <p>Xoş gördük</p>
+                                            <p>Fərid Vəliyev</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="language-options">
+                                        <img src="images/lang_icon.png" alt="country flag of the selected language" />
+                                        <p>English</p>
+                                        <img src="images/next_icon.png" alt="select icon" />
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="search-box">
+                                        <form action="#">
+                                            <input type="search" name="search" id="search" placeholder="Axtar" />
+                                            <img src="images/search_icon.png" alt="search icon" />
+                                        </form>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
             </nav>
         </div>
     </header>
@@ -54,7 +91,7 @@
                 <ul>
                     <li><a href="#">Ana Səhifə</a></li>
                     <li><a href="#">Müraciət edən şəxslərlə iş</a>
-                        <img src="images/dropdown_icon.png" alt="" id="dropdown">
+                        <img src="images/dropdown_icon.png" alt="" class="dropdown">
                         <ul>
                             <li><a href="#">Yeni müraciətlər</a></li>
                             <li class="active"><a href="#">İşaxtaran şəxslər</a></li>
@@ -64,6 +101,21 @@
                         </ul>
                     </li>
                 </ul>
+                <div class="responsive-sidebar">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-bars"></i></a></li>
+                        <li class="hide-menu"><a href="#">Ana Səhifə</a></li>
+                        <li class="hide-menu"><a href="#">Müraciət edən şəxslərlə iş</a><img src="images/dropdown_icon.png" alt="" class="dropdown">
+                            <ul>
+                                <li><a href="#">Yeni müraciətlər</a></li>
+                                <li class="active"><a href="#">İşaxtaran şəxslər</a></li>
+                                <li><a href="#">İşsiz şəxslər</a></li>
+                                <li><a href="#">İşlə təmin edilmiş şəxslər</a></li>
+                                <li><a href="#">Qeydiyyatı dayandırılmış şəxslər</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </aside>
         <!-- main content goes below -->
@@ -229,7 +281,7 @@
     </main>
     <!-- main section ends -->
 
-    <!-- modal starts -->
+    <!-- modal window starts -->
     <div class="modal">
         <div class="content">
             <div class="heading">
@@ -287,10 +339,11 @@
             </div>
         </div>
     </div>
-    <!-- modal ends -->
+    <!-- modal window ends -->
 
     <!-- necessary JS links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/3f7e3de7b3.js" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 </html>
